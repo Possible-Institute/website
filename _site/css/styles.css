@@ -87,6 +87,7 @@
   margin-bottom: 0;
   margin-left: -110px;
 }
+
 .hero-subtitle {
   font-size: 2rem;
   font-weight: 200;
@@ -108,4 +109,26 @@
 
 a {
   text-decoration: none;
+}
+
+@media (max-width: 600px) {
+  /* CSS rules for screens smaller than 600px */
+  .hero-title {
+    font-size: 3.5em;
+    margin-left: -30px;
+  }
+  .hero-subtitle{
+    font-size: 1em;
+  }
+}
+
+/* Styles for screens between 601px and 1024px */
+@media (min-width: 601px) and (max-width: 1200px) {
+  /* CSS rules for screens between 601px and 1024px */
+  .hero-title  {
+    font-size: 4em;
+  }
+  .hero-subtitle{
+    font-size: 2em;
+  }
 }
