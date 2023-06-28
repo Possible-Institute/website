@@ -25,3 +25,4 @@ win_configuration.bat
 src/resources/preview/quarto-preview.js
 .prettierrc.json
 _manuscript
+/.quarto/

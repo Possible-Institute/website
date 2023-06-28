@@ -11,19 +11,8 @@ format:
 execute:
   echo: false
 ---
-
-> "Starting the journey of learning is an exciting adventure full of limitless possibilities.”
-
-```{python}
-import pandas as pd
-import random
-df = pd.read_csv('dataset/ml-system.csv')
-
-i = random.randint(1, 100)
-title = df['Short Description (< 5 words)'][i].upper()
-sentence = "You can start to learn with".upper()
-print(sentence, title)
-```
+:::{.empty-space}
+:::
 
 :::{.column-screen}
 ```{=html}
@@ -137,3 +126,15 @@ Please share your feedback with us.
 :::{.empty-space}
 :::
 
+> "Starting the journey of learning is an exciting adventure full of limitless possibilities.”
+
+```{python}
+import pandas as pd
+import random
+df = pd.read_csv('dataset/ml-system.csv')
+
+i = random.randint(1, 100)
+title = df['Short Description (< 5 words)'][i].upper()
+sentence = "You can start to learn with".upper()
+print(sentence, title)
+```
