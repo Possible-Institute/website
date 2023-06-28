@@ -123,10 +123,10 @@ Embracing a growth mindset and being receptive to feedback are valuable qualitie
 
 Please share your feedback with us.
 
-:::{.empty-space}
+:::{.empty-half-space}
 :::
 
-> "Starting the journey of learning is an exciting adventure full of limitless possibilities.”
+### "Starting the journey of learning is an exciting adventure full of limitless possibilities.”
 
 ```{python}
 import pandas as pd
