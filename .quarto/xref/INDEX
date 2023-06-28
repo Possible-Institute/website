@@ -1,0 +1,32 @@
+{
+  "index.qmd": {
+    "index.html": "99ac7e5d"
+  },
+  "start-here.qmd": {
+    "start-here.html": "c511d1ab"
+  },
+  "blog.qmd": {
+    "blog.html": "b65cc891"
+  },
+  "posts/decision-making/index.qmd": {
+    "index.html": "acf02ec3"
+  },
+  "posts/read-multiple-csv/index.qmd": {
+    "index.html": "b5190a5e"
+  },
+  "posts/two-sample-z-test/index.qmd": {
+    "index.html": "a1f12fe7"
+  },
+  "posts/about-euler/index.qmd": {
+    "index.html": "c4d992b1"
+  },
+  "posts/regression/simple.qmd": {
+    "simple.html": "baf1c96f"
+  },
+  "posts/regression/multiple.qmd": {
+    "multiple.html": "58ce30a6"
+  },
+  "ml-systems.qmd": {
+    "ml-systems.html": "624f47ea"
+  }
+}
