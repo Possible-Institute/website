@@ -27,4 +27,3 @@ src/resources/preview/quarto-preview.js
 _manuscript
 /.quarto/
 /_site/
-/_freeze/
