@@ -15,8 +15,6 @@ flowchart TD
     D --> B
     B ---->|No| E[End]
 ```
-
-
 \
 **Here are some steps you can take to learn data science:**
 
