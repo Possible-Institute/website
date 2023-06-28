@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Possible Institute">
+<meta name="dcterms.date" content="2023-06-27">
 
-<title>Possible Institute - Learning is a gift that you can give yourself every day</title>
+<title>Possible Institute - Data-Driven and Intuition-Based Approaches in Decision-Making</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,23 +22,57 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "No results",
@@ -51,45 +87,25 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script src="site_libs/quarto-diagram/mermaid.min.js"></script>
-<script src="site_libs/quarto-diagram/mermaid-init.js"></script>
-<link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
-<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
-<script type="text/javascript">
-window.PlotlyConfig = {MathJaxConfig: 'local'};
-if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}
-if (typeof require !== 'undefined') {
-require.undef("plotly");
-requirejs.config({
-    paths: {
-        'plotly': ['https://cdn.plot.ly/plotly-2.24.1.min']
-    }
-});
-require(['plotly'], function(Plotly) {
-    window._Plotly = Plotly;
-});
-}
-</script>
-
-</head><body class="nav-fixed fullcontent">-<script src="app.js"></script>
+<script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
-<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="../../css/styles.css">
+</head>
 
-
-
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./images/logo_light.svg" alt="" class="navbar-logo">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../images/logo_light.svg" alt="" class="navbar-logo">
     </a>
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Possible Institute</span>
     </a>
   </div>
@@ -99,17 +115,17 @@ require(['plotly'], function(Plotly) {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" rel="" target="" aria-current="page"><i class="bi bi-cup-fill" role="img">
+    <a class="nav-link" href="../../index.html" rel="" target=""><i class="bi bi-cup-fill" role="img">
 </i> 
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./blog.html" rel="" target=""><i class="bi bi-eyeglasses" role="img">
+    <a class="nav-link" href="../../blog.html" rel="" target=""><i class="bi bi-eyeglasses" role="img">
 </i> 
  <span class="menu-text">Articles</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./start-here.html" rel="" target=""><i class="bi bi-file-text" role="img">
+    <a class="nav-link" href="../../start-here.html" rel="" target=""><i class="bi bi-file-text" role="img">
 </i> 
  <span class="menu-text">Learn Data Science</span></a>
   </li>  
@@ -131,14 +147,31 @@ require(['plotly'], function(Plotly) {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Learning is a gift that you can give yourself every day</h1>
-</div>
+<h1 class="title">Data-Driven and Intuition-Based Approaches in Decision-Making</h1>
+<p class="subtitle lead">Balancing data and human aspects in decision-making</p>
+  <div class="quarto-categories">
+    <div class="quarto-category">Decisions</div>
+    <div class="quarto-category">Critical-thinking</div>
+  </div>
+  </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Possible Institute </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">June 27, 2023</p>
+    </div>
+  </div>
   
     
   </div>
@@ -146,108 +179,129 @@ require(['plotly'], function(Plotly) {
 
 </header>
 
-<div class="empty-space">
+<div class="empty-half-space">
 
 </div>
-<div class="column-screen">
-<section class="hero">
-<div class="hero-content">
-    <h1 class="hero-title">
-        Curiosity &amp; Problem Solving Mindset _
-    </h1>
-    <h2 class="hero-subtitle anchored">
-        Data science is a discipline that lies at the intersection of mathematics, computer science, and business acumen. And a lot of curiosity and problem-solving mindset.
-    </h2>
-    <button type="button" class="hero-button" onclick="location.href='ml-systems.html'">
-        » List Machine Learning Systems
-    </button>
+<section id="data-can-reveal-correlations-relationships-and-potential-consequences.-however-understanding-of-the-data-require-human-reasoning-critical-thinking-and-context-specific-knowledge." class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="data-can-reveal-correlations-relationships-and-potential-consequences.-however-understanding-of-the-data-require-human-reasoning-critical-thinking-and-context-specific-knowledge.">Data can reveal correlations, relationships, and potential consequences. However, understanding of the data require human reasoning, critical thinking, and context-specific knowledge.</h2>
+<p>A <em>decision</em> refers to being resolute and having a clear judgment or opinion on a matter. It involves making a firm decision or having a determined purpose. Although important, data can’t replace the human aspects of decision-making such as emotional intelligence, empathy, and moral judgment, as they cannot be fully captured by data.</p>
+<div class="empty-half-space">
+
 </div>
-</section>
-<p><img src="./images/bg.svg" class="img-fluid"></p>
-</div>
-<p>Data science combines mathematics, computer science, and business acumen to extract valuable insights from raw data, helping organizations make informed decisions and achieve growth. Data science merges math, computer science, and business expertise to uncover valuable insights from data, empowering organizations to make informed decisions and drive growth.</p>
-<p>The initial years are about gaining experience, refining skills, understanding data intricacies, and learning how to leverage various data science tools. As you move further in your career, you’ll be confronted with more complex challenges, requiring not just technical proficiency but also strong business acumen and excellent communication skills.</p>
-<div class="cell" data-execution_count="1">
-<div class="cell-output cell-output-display">
-
-<div>                            <div id="f0eaf8f8-c43b-4457-9012-8d2a1f4e3edc" class="plotly-graph-div" style="height:525px; width:100%;"></div>            <script type="text/javascript">                require(["plotly"], function(Plotly) {                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("f0eaf8f8-c43b-4457-9012-8d2a1f4e3edc")) {                    Plotly.newPlot(                        "f0eaf8f8-c43b-4457-9012-8d2a1f4e3edc",                        [{"labels":["Research","Stats","Maths","ML","Deep Learning","CSS","Python","HTML","Cloud"],"parents":["","Research","Research","Maths","Maths","Research","Research","Python","Research"],"values":[10,14,12,10,2,6,6,4,4],"type":"sunburst"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"paper_bgcolor":"rgba(0,0,0,0)"},                        {"responsive": true}                    ).then(function(){
-                            
-var gd = document.getElementById('f0eaf8f8-c43b-4457-9012-8d2a1f4e3edc');
-var x = new MutationObserver(function (mutations, observer) {{
-        var display = window.getComputedStyle(gd).display;
-        if (!display || display === 'none') {{
-            console.log([gd, 'removed!']);
-            Plotly.purge(gd);
-            observer.disconnect();
-        }}
-}});
-
-// Listen for the removal of the full notebook cells
-var notebookContainer = gd.closest('#notebook-container');
-if (notebookContainer) {{
-    x.observe(notebookContainer, {childList: true});
-}}
-
-// Listen for the clearing of the current output cell
-var outputEl = gd.closest('.output');
-if (outputEl) {{
-    x.observe(outputEl, {childList: true});
-}}
-
-                        })                };                });            </script>        </div>
+<section id="its-crucial-to-note-that-neither-method-has-a-built-in-advantage-over-the-other.-the-best-choice-depends-entirely-on-the-specific-context-and-situation-at-hand." class="level5 page-columns page-full">
+<h5 class="anchored" data-anchor-id="its-crucial-to-note-that-neither-method-has-a-built-in-advantage-over-the-other.-the-best-choice-depends-entirely-on-the-specific-context-and-situation-at-hand.">It’s crucial to note that neither method has a built-in advantage over the other. The best choice depends entirely on the specific context and situation at hand.</h5>
+<div class="column-page-inset">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/bg3.jpg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Bright Glass Abstract by Cláudia Silva</figcaption>
+</figure>
 </div>
 </div>
-<p>You must be prepared to constantly update your knowledge, learn new techniques, and adapt to new technologies. This persistent learning attitude is what separates a good data scientist from a great one.</p>
-<section id="the-problem-solving-framework" class="level3">
-<h3 class="anchored" data-anchor-id="the-problem-solving-framework">The Problem-Solving Framework</h3>
-<p>Problem-solving involves a systematic approach to understanding and resolving issues. To begin, it is crucial to clearly define the problem and gather relevant information to understand its key components comprehensively. Analyzing the root causes helps identify underlying factors, patterns, connections, and potential obstacles contributing to the problem. Once a detailed analysis is conducted, it’s time to generate alternative solutions, encouraging creativity and considering different perspectives.</p>
-<p>Evaluating the options involves assessing their advantages, disadvantages, feasibility, and potential risks and benefits. Based on this evaluation, a suitable solution can be selected, considering the potential impact on stakeholders. With a decision in place, an action plan can be developed, outlining clear goals, milestones, and responsibilities.</p>
-<p>Implementing the preferred solution requires implementing the action plan, monitoring progress, making necessary adjustments, and overcoming challenges. Once the solution is implemented, it is essential to evaluate the results by assessing the outcomes and comparing them to the desired goals to evaluate effectiveness.</p>
-<p>Learning and iterating are critical components of the problem-solving process, as they allow for reflection, identification of lessons learned, and areas for improvement.</p>
-<div class="cell">
+<div class="cell" data-fig-width="40">
 <div class="cell-output-display">
 <div>
 <div>
-<pre class="mermaid mermaid-js">flowchart TD
-    A[Identify and understand the problem] --&gt; B[Analyze the root causes]
-    B --&gt;|Generate alternative solutions| C[Evaluate the options]
-    C --&gt; D[Make a decision]
-    D --&gt; F[Develop an action plan]
-    F --&gt; G[Implement the solution]
-    G --&gt; I[Learn and iterate]
-    I --&gt; C
-    B ----&gt;| No Extract| E[New Model]
+
+<pre class="mermaid mermaid-js">flowchart TB
+  C{Decision-making} --&gt; D[Data-Driven Decisions]
+  C --&gt; E[Intuition-Based Decisions]
+  D --&gt; X[Sensitive with historical data]
+  E --&gt; Y[Sensitive with biases, and not repeatable]
+  X --&gt; Z[Data-informed decisions, if possible] 
+  Y --&gt; Z
 </pre>
 </div>
 </div>
 </div>
 </div>
-<div class="empty-space">
-
-</div>
-<div class="cell" data-execution_count="2">
-<div class="cell-output cell-output-display">
-
-        <iframe width="100%" height="650" src="http://127.0.0.1:8050/" frameborder="0" allowfullscreen=""></iframe>
-        
-</div>
-</div>
-</section>
-<section id="feedback" class="level3">
-<h3 class="anchored" data-anchor-id="feedback">Feedback</h3>
-<p>Embracing a growth mindset and being receptive to feedback are valuable qualities. Criticism, whether constructive or not, can be a powerful tool for learning and personal development. In the dynamic field of data science, there is always something new to discover and explore. The journey of learning and growing is ongoing, as the field continues to evolve.</p>
-<p>Please share your feedback with us.</p>
+<p><br>
+</p>
+<ol type="1">
+<li><p><strong>Data-Driven Decisions</strong>: This is often the preferred method in situations where a large amount of quantitative information is available and the decision-making environment is stable and predictable. It tends to be more objective and can help reduce biases in decision-making. Data-driven decision-making is often used in fields like finance, marketing, and logistics where there’s plenty of historical data to analyze and predict future trends. However, it’s crucial to ensure that the data is reliable, accurate, and relevant to the decision at hand.</p>
+<p><em>The data-driven decision making can be time-consuming, require specialized skills, and may not be applicable in novel situations with no past data to rely upon.</em></p></li>
+<li><p><strong>Intuition-Based Decisions</strong>: This is typically used in situations where there’s a lack of data, the environment is highly uncertain or rapidly changing, or the decision involves complex qualitative factors that are difficult to quantify. It often leverages personal experience, instincts, and tacit knowledge. Entrepreneurs, for instance, often rely on their intuition to make strategic decisions about new products or markets.</p>
+<p><em>This approach can be prone to cognitive biases and may not always be repeatable or justifiable to others.</em></p></li>
+</ol>
+<p>In practice, the most effective decision-making often involves a combination of both data-driven and intuition-based methods. This is often called “data-informed” decision-making. It means you use data as a key input, but you also consider other factors, like your own intuition, qualitative insights, and contextual factors that the data may not fully capture. This approach provides a more holistic view of the situation and allows for more nuanced and adaptable decisions.</p>
+<p>Remember that data is a tool to inform decisions, not to make them. There’s a human aspect to decision-making that can’t be replaced by data. Emotional intelligence, empathy, and moral judgment are all aspects that data can’t fully encompass.</p>
 <div class="empty-half-space">
 
 </div>
 </section>
-<section id="starting-the-journey-of-learning-is-an-exciting-adventure-full-of-limitless-possibilities." class="level3">
-<h3 class="anchored" data-anchor-id="starting-the-journey-of-learning-is-an-exciting-adventure-full-of-limitless-possibilities.">“Starting the journey of learning is an exciting adventure full of limitless possibilities.”</h3>
-<div class="cell" data-execution_count="3">
+<div class="grid">
+<section id="lets-have-an-example" class="level4 g-col-2">
+<h4 class="anchored" data-anchor-id="lets-have-an-example">Let’s have an example /</h4>
+</section>
+<div class="g-col-2">
+
+</div>
+<section id="imagine-we-have-a-dataset-about-student-performance.-a-data-driven-decision-might-be-to-identify-students-who-need-additional-support-based-on-their-grades." class="level4 g-col-8">
+<h4 class="anchored" data-anchor-id="imagine-we-have-a-dataset-about-student-performance.-a-data-driven-decision-might-be-to-identify-students-who-need-additional-support-based-on-their-grades.">Imagine we have a dataset about student performance. A data-driven decision might be to identify students who need additional support based on their grades.</h4>
+</section>
+</div>
+<p>We can use a basic Python illustration to showcase how data-driven and intuition-based decision-making can complement each other. Here’s how we might do it:</p>
+<div class="cell" data-execution_count="1">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Assuming you have a pandas DataFrame 'df' with students' names and their grades.</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame({</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Name'</span>: [<span class="st">'Alice'</span>, <span class="st">'Bob'</span>, <span class="st">'Charlie'</span>, <span class="st">'David'</span>, <span class="st">'Ella'</span>],</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Grade'</span>: [<span class="dv">85</span>, <span class="dv">70</span>, <span class="dv">78</span>, <span class="dv">64</span>, <span class="dv">92</span>]</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># We could decide that any student with a grade below 75 needs additional support.</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>students_needing_support <span class="op">=</span> df[df[<span class="st">'Grade'</span>] <span class="op">&lt;</span> <span class="dv">75</span>]</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(students_needing_support)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-stdout">
-<pre><code>YOU CAN START TO LEARN WITH PERSONALIZE RECOMMENDATIONS</code></pre>
+<pre><code>    Name  Grade
+1    Bob     70
+3  David     64</code></pre>
 </div>
 </div>
+<p>In this case, we made a data-driven decision that Bob and David need additional support because their grades were below 75. But what if there’s more to the story? Let’s say, we know from talking to the teachers (intuition-based/qualitative input) that Alice, despite her high grade, has been struggling with personal issues and might benefit from additional support.</p>
+<p>We could incorporate this intuition-based insight into our decision-making process like so:</p>
+<div class="cell" data-execution_count="2">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Add Alice to the list of students needing support.</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>alice_df <span class="op">=</span> df[df[<span class="st">'Name'</span>] <span class="op">==</span> <span class="st">'Alice'</span>]</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>students_needing_support <span class="op">=</span> pd.concat([students_needing_support, alice_df])</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(students_needing_support)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>    Name  Grade
+1    Bob     70
+3  David     64
+0  Alice     85</code></pre>
+</div>
+</div>
+<div class="empty-half-space">
+
+</div>
+<div class="grid">
+<section id="the-conclusion" class="level4 g-col-2">
+<h4 class="anchored" data-anchor-id="the-conclusion">The Conclusion /</h4>
+</section>
+<div class="g-col-2">
+
+</div>
+<div class="g-col-8">
+<p>Our approach is to use data as a guide for making decisions while also taking into account qualitative insights and intuition. It’s important to remember that data should inform decisions, but not be the sole basis for making them.</p>
+</div>
+</div>
+<div class="empty-half-space">
+
+</div>
+<p><a href="#">Thank you for reading</a></p>
 
 
 </section>

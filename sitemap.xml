@@ -1,15 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://www.possible.institute/posts/decision-making/index.html</loc>
+    <lastmod>2023-06-28T18:57:10.287Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.possible.institute/posts/read-multiple-csv/index.html</loc>
+    <lastmod>2023-06-28T18:57:10.599Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.possible.institute/posts/two-sample-z-test/index.html</loc>
+    <lastmod>2023-06-28T18:57:10.895Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.possible.institute/posts/about-euler/index.html</loc>
+    <lastmod>2023-06-28T18:57:11.240Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.possible.institute/posts/regression/simple.html</loc>
+    <lastmod>2023-06-28T18:57:11.631Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.possible.institute/posts/regression/multiple.html</loc>
+    <lastmod>2023-06-28T18:57:11.983Z</lastmod>
+  </url>
+  <url>
     <loc>https://www.possible.institute/index.html</loc>
-    <lastmod>2023-06-28T18:52:56.950Z</lastmod>
+    <lastmod>2023-06-28T18:57:12.434Z</lastmod>
   </url>
   <url>
     <loc>https://www.possible.institute/start-here.html</loc>
-    <lastmod>2023-06-28T18:52:57.588Z</lastmod>
+    <lastmod>2023-06-28T18:57:12.960Z</lastmod>
   </url>
   <url>
     <loc>https://www.possible.institute/blog.html</loc>
-    <lastmod>2023-06-28T18:52:57.911Z</lastmod>
+    <lastmod>2023-06-28T18:57:13.332Z</lastmod>
   </url>
 </urlset>

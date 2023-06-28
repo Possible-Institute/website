@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Possible Insitute">
+<meta name="dcterms.date" content="2023-03-03">
 
-<title>Possible Institute - Learning is a gift that you can give yourself every day</title>
+<title>Possible Institute - Simple Linear Regression</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,20 +25,20 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "No results",
@@ -51,45 +53,24 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script src="site_libs/quarto-diagram/mermaid.min.js"></script>
-<script src="site_libs/quarto-diagram/mermaid-init.js"></script>
-<link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
-<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
-<script type="text/javascript">
-window.PlotlyConfig = {MathJaxConfig: 'local'};
-if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}
-if (typeof require !== 'undefined') {
-require.undef("plotly");
-requirejs.config({
-    paths: {
-        'plotly': ['https://cdn.plot.ly/plotly-2.24.1.min']
-    }
-});
-require(['plotly'], function(Plotly) {
-    window._Plotly = Plotly;
-});
-}
-</script>
 
-</head><body class="nav-fixed fullcontent">-<script src="app.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
+<link rel="stylesheet" href="../../css/styles.css">
+</head>
 
-<link rel="stylesheet" href="css/styles.css">
-
-
-
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./images/logo_light.svg" alt="" class="navbar-logo">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../images/logo_light.svg" alt="" class="navbar-logo">
     </a>
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Possible Institute</span>
     </a>
   </div>
@@ -99,17 +80,17 @@ require(['plotly'], function(Plotly) {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" rel="" target="" aria-current="page"><i class="bi bi-cup-fill" role="img">
+    <a class="nav-link" href="../../index.html" rel="" target=""><i class="bi bi-cup-fill" role="img">
 </i> 
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./blog.html" rel="" target=""><i class="bi bi-eyeglasses" role="img">
+    <a class="nav-link" href="../../blog.html" rel="" target=""><i class="bi bi-eyeglasses" role="img">
 </i> 
  <span class="menu-text">Articles</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./start-here.html" rel="" target=""><i class="bi bi-file-text" role="img">
+    <a class="nav-link" href="../../start-here.html" rel="" target=""><i class="bi bi-file-text" role="img">
 </i> 
  <span class="menu-text">Learn Data Science</span></a>
   </li>  
@@ -127,18 +108,33 @@ require(['plotly'], function(Plotly) {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content page-columns page-full" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Learning is a gift that you can give yourself every day</h1>
-</div>
+<h1 class="title">Simple Linear Regression</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">linear-regression</div>
+  </div>
+  </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Possible Insitute </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">March 3, 2023</p>
+    </div>
+  </div>
   
     
   </div>
@@ -146,110 +142,64 @@ require(['plotly'], function(Plotly) {
 
 </header>
 
-<div class="empty-space">
-
-</div>
-<div class="column-screen">
-<section class="hero">
-<div class="hero-content">
-    <h1 class="hero-title">
-        Curiosity &amp; Problem Solving Mindset _
-    </h1>
-    <h2 class="hero-subtitle anchored">
-        Data science is a discipline that lies at the intersection of mathematics, computer science, and business acumen. And a lot of curiosity and problem-solving mindset.
-    </h2>
-    <button type="button" class="hero-button" onclick="location.href='ml-systems.html'">
-        » List Machine Learning Systems
-    </button>
-</div>
+<section id="simple-linear-regression-a-comprehensive-guide" class="level1">
+<h1>Simple Linear Regression: A Comprehensive Guide</h1>
+<p>Simple linear regression is a statistical method that allows us to summarize and study relationships between two continuous (quantitative) variables. This method is widely used for predictive analysis. This article will delve into the concept of simple linear regression, its assumptions, how it works, its applications, and limitations.</p>
+<section id="what-is-simple-linear-regression" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-simple-linear-regression">What is Simple Linear Regression?</h2>
+<p>Simple linear regression is a type of regression analysis where the number of independent variables is one and there is a linear relationship between the independent(x) and dependent(y) variable. The objective of simple linear regression is to model the expected relationship between the two variables.</p>
+<p>The relationship is represented by the following equation:</p>
+<p><span class="math display">\[
+Y = a + bX + e
+\]</span></p>
+<p>Here, (Y) is the dependent variable we’re trying to predict or estimate; (X) is the independent variable we’re using to make predictions; (a) represents the intercept of the regression line; (b) represents the slope of the regression line and shows the rate at which (Y) changes for each change in (X); (e) is the error term (also known as the residual errors), the part of (Y) the regression model couldn’t explain.</p>
 </section>
-<p><img src="./images/bg.svg" class="img-fluid"></p>
-</div>
-<p>Data science combines mathematics, computer science, and business acumen to extract valuable insights from raw data, helping organizations make informed decisions and achieve growth. Data science merges math, computer science, and business expertise to uncover valuable insights from data, empowering organizations to make informed decisions and drive growth.</p>
-<p>The initial years are about gaining experience, refining skills, understanding data intricacies, and learning how to leverage various data science tools. As you move further in your career, you’ll be confronted with more complex challenges, requiring not just technical proficiency but also strong business acumen and excellent communication skills.</p>
-<div class="cell" data-execution_count="1">
-<div class="cell-output cell-output-display">
-
-<div>                            <div id="f0eaf8f8-c43b-4457-9012-8d2a1f4e3edc" class="plotly-graph-div" style="height:525px; width:100%;"></div>            <script type="text/javascript">                require(["plotly"], function(Plotly) {                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("f0eaf8f8-c43b-4457-9012-8d2a1f4e3edc")) {                    Plotly.newPlot(                        "f0eaf8f8-c43b-4457-9012-8d2a1f4e3edc",                        [{"labels":["Research","Stats","Maths","ML","Deep Learning","CSS","Python","HTML","Cloud"],"parents":["","Research","Research","Maths","Maths","Research","Research","Python","Research"],"values":[10,14,12,10,2,6,6,4,4],"type":"sunburst"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"paper_bgcolor":"rgba(0,0,0,0)"},                        {"responsive": true}                    ).then(function(){
-                            
-var gd = document.getElementById('f0eaf8f8-c43b-4457-9012-8d2a1f4e3edc');
-var x = new MutationObserver(function (mutations, observer) {{
-        var display = window.getComputedStyle(gd).display;
-        if (!display || display === 'none') {{
-            console.log([gd, 'removed!']);
-            Plotly.purge(gd);
-            observer.disconnect();
-        }}
-}});
-
-// Listen for the removal of the full notebook cells
-var notebookContainer = gd.closest('#notebook-container');
-if (notebookContainer) {{
-    x.observe(notebookContainer, {childList: true});
-}}
-
-// Listen for the clearing of the current output cell
-var outputEl = gd.closest('.output');
-if (outputEl) {{
-    x.observe(outputEl, {childList: true});
-}}
-
-                        })                };                });            </script>        </div>
-</div>
-</div>
-<p>You must be prepared to constantly update your knowledge, learn new techniques, and adapt to new technologies. This persistent learning attitude is what separates a good data scientist from a great one.</p>
-<section id="the-problem-solving-framework" class="level3">
-<h3 class="anchored" data-anchor-id="the-problem-solving-framework">The Problem-Solving Framework</h3>
-<p>Problem-solving involves a systematic approach to understanding and resolving issues. To begin, it is crucial to clearly define the problem and gather relevant information to understand its key components comprehensively. Analyzing the root causes helps identify underlying factors, patterns, connections, and potential obstacles contributing to the problem. Once a detailed analysis is conducted, it’s time to generate alternative solutions, encouraging creativity and considering different perspectives.</p>
-<p>Evaluating the options involves assessing their advantages, disadvantages, feasibility, and potential risks and benefits. Based on this evaluation, a suitable solution can be selected, considering the potential impact on stakeholders. With a decision in place, an action plan can be developed, outlining clear goals, milestones, and responsibilities.</p>
-<p>Implementing the preferred solution requires implementing the action plan, monitoring progress, making necessary adjustments, and overcoming challenges. Once the solution is implemented, it is essential to evaluate the results by assessing the outcomes and comparing them to the desired goals to evaluate effectiveness.</p>
-<p>Learning and iterating are critical components of the problem-solving process, as they allow for reflection, identification of lessons learned, and areas for improvement.</p>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<div>
-<pre class="mermaid mermaid-js">flowchart TD
-    A[Identify and understand the problem] --&gt; B[Analyze the root causes]
-    B --&gt;|Generate alternative solutions| C[Evaluate the options]
-    C --&gt; D[Make a decision]
-    D --&gt; F[Develop an action plan]
-    F --&gt; G[Implement the solution]
-    G --&gt; I[Learn and iterate]
-    I --&gt; C
-    B ----&gt;| No Extract| E[New Model]
-</pre>
-</div>
-</div>
-</div>
-</div>
-<div class="empty-space">
-
-</div>
-<div class="cell" data-execution_count="2">
-<div class="cell-output cell-output-display">
-
-        <iframe width="100%" height="650" src="http://127.0.0.1:8050/" frameborder="0" allowfullscreen=""></iframe>
-        
-</div>
-</div>
+<section id="assumptions-of-simple-linear-regression" class="level2">
+<h2 class="anchored" data-anchor-id="assumptions-of-simple-linear-regression">Assumptions of Simple Linear Regression</h2>
+<p>Simple linear regression makes five key assumptions:</p>
+<ol type="1">
+<li><strong>Linearity</strong>: The relationship between (X) and the mean of (Y) is linear.</li>
+<li><strong>Homoscedasticity</strong>: The variance of residual is the same for any value of (X).</li>
+<li><strong>Independence</strong>: Observations are independent of each other.</li>
+<li><strong>Normality</strong>: For any fixed value of (X), (Y) is normally distributed.</li>
+<li><strong>Error term has a mean of zero</strong>: The mean of the distribution of errors is assumed to be zero.</li>
+</ol>
 </section>
-<section id="feedback" class="level3">
-<h3 class="anchored" data-anchor-id="feedback">Feedback</h3>
-<p>Embracing a growth mindset and being receptive to feedback are valuable qualities. Criticism, whether constructive or not, can be a powerful tool for learning and personal development. In the dynamic field of data science, there is always something new to discover and explore. The journey of learning and growing is ongoing, as the field continues to evolve.</p>
-<p>Please share your feedback with us.</p>
-<div class="empty-half-space">
-
-</div>
+<section id="how-does-simple-linear-regression-work" class="level2">
+<h2 class="anchored" data-anchor-id="how-does-simple-linear-regression-work">How Does Simple Linear Regression Work?</h2>
+<p>The goal of simple linear regression is to create a linear model that minimizes the sum of squares of the residuals/error terms. The steps to perform simple linear regression are:</p>
+<ol type="1">
+<li><p><strong>Estimate the Coefficients</strong>: The coefficients (a) and (b) are estimated using the least-squares criterion, which means we find the line (mathematically) which minimizes the sum of squared residuals (or “sum of squared errors”).</p></li>
+<li><p><strong>Fit the Model</strong>: Once we find the coefficients, we can use them to predict the output(y) of a given independent variable (X). This line is the “line of best fit”.</p></li>
+<li><p><strong>Interpret the Coefficients</strong>: The coefficients can be interpreted as the change in the dependent variable for each one-unit change in the independent variable, assuming all other variables are held constant.</p></li>
+</ol>
 </section>
-<section id="starting-the-journey-of-learning-is-an-exciting-adventure-full-of-limitless-possibilities." class="level3">
-<h3 class="anchored" data-anchor-id="starting-the-journey-of-learning-is-an-exciting-adventure-full-of-limitless-possibilities.">“Starting the journey of learning is an exciting adventure full of limitless possibilities.”</h3>
-<div class="cell" data-execution_count="3">
-<div class="cell-output cell-output-stdout">
-<pre><code>YOU CAN START TO LEARN WITH PERSONALIZE RECOMMENDATIONS</code></pre>
-</div>
-</div>
+<section id="applications-of-simple-linear-regression" class="level2">
+<h2 class="anchored" data-anchor-id="applications-of-simple-linear-regression">Applications of Simple Linear Regression</h2>
+<p>Simple linear regression is used in a wide array of fields. Some examples include:</p>
+<ol type="1">
+<li><strong>Finance</strong>: Predicting the impact of changes in interest rates on stock price.</li>
+<li><strong>Real Estate</strong>: Predicting house prices based on the house size.</li>
+<li><strong>Marketing</strong>: Predicting sales based on the amount spent on advertising.</li>
+<li><strong>Supply Chain</strong>: Predicting the time to deliver a product based on the distance.</li>
+</ol>
+</section>
+<section id="limitations-of-simple-linear-regression" class="level2">
+<h2 class="anchored" data-anchor-id="limitations-of-simple-linear-regression">Limitations of Simple Linear Regression</h2>
+<p>While simple linear regression is a powerful tool, it has its limitations:</p>
+<ol type="1">
+<li><p><strong>Linearity &amp; Independence Assumption</strong>: The assumption of Linearity and Independence may not hold in many scenarios. For example, predicting disease progression; it is not necessary that the progression is linear and independent always.</p></li>
+<li><p><strong>Outliers</strong>: Simple linear regression is sensitive to outliers. A single outlier can significantly change the model’s predictions.</p></li>
+<li><p><strong>Limited to two variables</strong>: As it is a simple linear regression, it can only consider a single independent variable. In many cases, a phenomenon can be influenced by multiple variables</p></li>
+<li><p><strong>Prone to Overfitting</strong>: If the model is too complex, it can become overfitted. An overfitted model will perform well on the training data but poorly on unseen data.</p></li>
+</ol>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>Simple linear regression is a fundamental statistical technique that has found application in a wide range of fields due to its simplicity and interpretability. It serves as a good starting point for more complex analysis and is a cornerstone in understanding the basics of machine learning. However, it is essential to understand its assumptions and limitations to interpret the results accurately.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
