@@ -1,0 +1,28 @@
+---
+title: "Two Sample Z-Test"
+subtitle: "A statistical test to compare two sample means"
+author: "Possible Institute"
+date: "2022-11-18"
+categories: 
+    - statistics
+    - python
+image: "image.jpg"
+---
+
+
+```{.python filename="two_samples_z_test.py"}
+def twoSampZ(X1, X2, mudiff, sd1, sd2, n1, n2):
+    from numpy import sqrt, abs, round
+    from scipy.stats import norm
+    pooledSE = sqrt(sd1**2/n1 + sd2**2/n2)
+    z = ((X1 - X2) - mudiff)/pooledSE
+    pval = 2*(norm.sf(abs(z)))
+    return round(z, 9), round(pval, 9)
+
+
+z, p = twoSampZ(79.24, 73.74, 0, 19.76, 16.86, 174, 159)
+a, b = twoSampZ(109.31, 113.42, 0, 27.671, 25.464, 206, 190)
+
+print(z, p)
+print(a, b)
+```
