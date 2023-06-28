@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;1,300;1,400&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+/*-- scss:defaults --*/
+$primary: #ff5e62;
+$body-bg:  #e0dbe6;
+$body-color: #000000;
+$navbar-bg:transparent !default;
+$footer-bg:transparent !default;
+$footer-fg:ccc !default;
+$code-block-bg: #e1f0f8 !default;
+$popover-bg: #1b1b1f !default;
+$card-cap-bg: rgba(black, .03);  
+$font-family-serif: 'IBM Plex Serif', serif;
+$font-family-monospace: 'IBM Plex Mono', monospace;
+$font-family-base: 'IBM Plex Mono', monospace;
+$body-font-family: 'IBM Plex Mono', monospace;
+$font-size-base:        1rem !default;
+$navbar-brand-font-size: 1rem !default;
+$code-color:#4d2337 !default;
+$pre-color: #7a3f5a !default;
+
+
+/*-- scss:rules --*/
+h1, h2, h3, h4, h5 {
+  text-shadow: none;
+  font-family: $font-family-monospace;
+  padding: auto;
+  margin-bottom: 2.5rem;
+  margin: 10 20 20 10;
+  text-transform: uppercase;
+}
+h6 {
+  text-shadow: none;
+  font-family: $font-family-monospace;
+  text-transform: uppercase;
+  text-align: auto;
+  text-justify: auto;
+  padding: 12px;
+  margin:auto;
+  border: 3px solid #1b1b1f;
+}
+
+// Colors
+$dot-color: hsl(255, 5%, 48%);
+
+// Dimensions
+$dot-size: 2px;
+$dot-space: 29px;
+
+
+.empty-space {
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  height: 200px;
+  background: linear-gradient(90deg, $body-bg ($dot-space - $dot-size), transparent 1%) center, linear-gradient($body-bg ($dot-space - $dot-size), transparent 1%) center, $dot-color;
+  background-size: $dot-space $dot-space;
+}
+
+.empty-half-space {
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  height: 100px;
+  background: linear-gradient(90deg, $body-bg ($dot-space - $dot-size), transparent 1%) center, linear-gradient($body-bg ($dot-space - $dot-size), transparent 1%) center, $dot-color;
+  background-size: $dot-space $dot-space;
+}
