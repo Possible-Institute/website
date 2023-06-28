@@ -1,0 +1,15 @@
+{
+  "hash": "0e8802fd45f09c712c62e34177fe3e36",
+  "result": {
+    "markdown": "::: {.cell execution_count=1}\n``` {.python .cell-code}\n# Run this app with `python app.py` and\n# visit http://127.0.0.1:8050/ in your web browser.\n\nfrom dash import Dash, html, dcc\nimport plotly.express as px\nimport pandas as pd\n\napp = Dash(__name__)\n\ncolors = {\n    'background': '#f3dade',\n    'text': '#7FDBFF'\n}\n\n# assume you have a \"long-form\" data frame\n# see https://plotly.com/python/px-arguments/ for more options\ndf = pd.DataFrame({\n    \"Fruit\": [\"Apples\", \"Oranges\", \"Bananas\", \"Apples\", \"Oranges\", \"Bananas\"],\n    \"Amount\": [4, 1, 2, 2, 4, 5],\n    \"City\": [\"SF\", \"SF\", \"SF\", \"Montreal\", \"Montreal\", \"Montreal\"]\n})\n\nfig = px.bar(df, x=\"Fruit\", y=\"Amount\", color=\"City\", barmode=\"group\")\n\napp.layout = html.Div(children=[\n    html.H1(children='Hello Dash'),\n\n    html.Div(children='''\n        Dash: A web application framework for your data.\n    '''),\n\n    dcc.Graph(\n        id='example-graph',\n        figure=fig\n    )\n])\n\nif __name__ == '__main__':\n    app.run_server(debug=True)\n```\n\n::: {.cell-output .cell-output-display}\n```{=html}\n\n        <iframe\n            width=\"100%\"\n            height=\"650\"\n            src=\"http://127.0.0.1:8050/\"\n            frameborder=\"0\"\n            allowfullscreen\n            \n        ></iframe>\n        \n```\n:::\n:::\n\n\n",
+    "supporting": [
+      "dash_files"
+    ],
+    "filters": [],
+    "includes": {
+      "include-in-header": [
+        "<script src=\"https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js\" integrity=\"sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==\" crossorigin=\"anonymous\"></script>\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js\" integrity=\"sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==\" crossorigin=\"anonymous\"></script>\n<script type=\"application/javascript\">define('jquery', [],function() {return window.jQuery;})</script>\n"
+      ]
+    }
+  }
+}

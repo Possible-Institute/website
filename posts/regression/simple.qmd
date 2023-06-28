@@ -1,0 +1,68 @@
+---
+title: "Simple Linear Regression"
+subtitle: ""
+author: "Possible Insitute"
+date: "2023-03-03"
+categories: [linear-regression]
+image: "thumbnail.jpg"
+
+---
+
+# Simple Linear Regression: A Comprehensive Guide
+
+Simple linear regression is a statistical method that allows us to summarize and study relationships between two continuous (quantitative) variables. This method is widely used for predictive analysis. This article will delve into the concept of simple linear regression, its assumptions, how it works, its applications, and limitations.
+
+## What is Simple Linear Regression?
+
+Simple linear regression is a type of regression analysis where the number of independent variables is one and there is a linear relationship between the independent(x) and dependent(y) variable. The objective of simple linear regression is to model the expected relationship between the two variables.
+
+The relationship is represented by the following equation:
+
+$$
+Y = a + bX + e
+$$
+
+Here, \(Y\) is the dependent variable we're trying to predict or estimate; \(X\) is the independent variable we're using to make predictions; \(a\) represents the intercept of the regression line; \(b\) represents the slope of the regression line and shows the rate at which \(Y\) changes for each change in \(X\); \(e\) is the error term (also known as the residual errors), the part of \(Y\) the regression model couldn't explain.
+
+## Assumptions of Simple Linear Regression
+
+Simple linear regression makes five key assumptions:
+
+1. **Linearity**: The relationship between \(X\) and the mean of \(Y\) is linear.
+2. **Homoscedasticity**: The variance of residual is the same for any value of \(X\).
+3. **Independence**: Observations are independent of each other.
+4. **Normality**: For any fixed value of \(X\), \(Y\) is normally distributed.
+5. **Error term has a mean of zero**: The mean of the distribution of errors is assumed to be zero.
+
+## How Does Simple Linear Regression Work?
+
+The goal of simple linear regression is to create a linear model that minimizes the sum of squares of the residuals/error terms. The steps to perform simple linear regression are:
+
+1. **Estimate the Coefficients**: The coefficients \(a\) and \(b\) are estimated using the least-squares criterion, which means we find the line (mathematically) which minimizes the sum of squared residuals (or "sum of squared errors").
+
+2. **Fit the Model**: Once we find the coefficients, we can use them to predict the output(y) of a given independent variable \(X\). This line is the "line of best fit".
+
+3. **Interpret the Coefficients**: The coefficients can be interpreted as the change in the dependent variable for each one-unit change in the independent variable, assuming all other variables are held constant.
+
+## Applications of Simple Linear Regression
+
+Simple linear regression is used in a wide array of fields. Some examples include:
+
+1. **Finance**: Predicting the impact of changes in interest rates on stock price.
+2. **Real Estate**: Predicting house prices based on the house size.
+3. **Marketing**: Predicting sales based on the amount spent on advertising.
+4. **Supply Chain**: Predicting the time to deliver a product based on the distance.
+
+## Limitations of Simple Linear Regression
+
+While simple linear regression is a powerful tool, it has its limitations:
+
+1. **Linearity & Independence Assumption**: The assumption of Linearity and Independence may not hold in many scenarios. For example, predicting disease progression; it is not necessary that the progression is linear and independent always.
+2. **Outliers**: Simple linear regression is sensitive to outliers. A single outlier can significantly change the model's predictions.
+3. **Limited to two variables**: As it is a simple linear regression, it can only consider a single independent variable. In many cases, a phenomenon can be influenced by multiple variables
+
+4. **Prone to Overfitting**: If the model is too complex, it can become overfitted. An overfitted model will perform well on the training data but poorly on unseen data.
+
+## Conclusion
+
+Simple linear regression is a fundamental statistical technique that has found application in a wide range of fields due to its simplicity and interpretability. It serves as a good starting point for more complex analysis and is a cornerstone in understanding the basics of machine learning. However, it is essential to understand its assumptions and limitations to interpret the results accurately.
