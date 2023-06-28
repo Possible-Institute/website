@@ -1,0 +1,64 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  twitter-card: false
+  sidebar: false
+  page-navigation: true
+  title: "Possible Institute"
+  site-url: https://www.possible.institute
+  navbar:
+    logo: images/logo_light.svg
+    background: primary
+    left:
+      - text: "Home"
+        icon: cup-fill
+        file: index.qmd
+      - text: "Articles"
+        icon: eyeglasses
+        file: blog.qmd
+      - text: "Learn Data Science"
+        icon: file-text
+        file: start-here.qmd
+  page-footer: 
+    background: dark
+    left: "Possible Institute  © 2023, Built with Quarto."
+    right:
+      - icon: github
+        href: https://github.com/orgs/Possible-Institute/
+      - icon: arrow-up-right-circle-fill
+        href: https://quarto.org
+      - icon: bi-discord
+        href: https://discord.com/channels/1038940293476663397/1038940293476663400
+      - icon: bi-linkedin
+        href: https://www.linkedin.com/company/possible-institute
+  search: false
+    # location: navbar
+    # type: overlay
+    # copy-button: true
+
+execute:
+  freeze: auto
+
+format:
+  html:
+    theme:
+      light: css/light.scss
+      dark: css/dark.scss 
+    css: css/styles.css
+    highlight-style: github
+    link-external-newwindow: true
+    fig-align: center
+    toc: false
+    code-copy: true
+    code-fold: true
+    code-summary: "Show the code"
+    code-tools: false
+    caption: none
+    toggle: true
+    code-overflow: wrap
+    reader-mode: true
+
+repo-url: https://github.com/Possible-Institute/website
+repo-actions: [edit, issue]
