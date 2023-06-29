@@ -525,7 +525,7 @@ font-style: inherit;">break</span></span></code></pre></div>
 </div>
 <p>For performance, especially when dealing with a large number of CSV files or large individual files, it can be beneficial to use Dask instead of Pandas. Dask is a flexible library for parallel computing in Python that integrates well with the existing Python ecosystem and is particularly good at working with large datasets.</p>
 <p>Here’s how you can use Dask to read multiple CSV files more efficiently:</p>
-<pre class="{code}"><code>import dask.dataframe as dd
+<pre data-code="python"><code>import dask.dataframe as dd
 
 # Use Dask to read all CSV files
 df = dd.read_csv('dataset/*.csv')
@@ -535,7 +535,7 @@ all_data = df.compute()
 
 print(all_data)
 </code></pre>
-<p>In this code, dd.read_csv(’*.csv’) reads all CSV files matching the wildcard pattern and returns a Dask DataFrame. This operation is lazy; it doesn’t trigger any actual computation but builds up a task graph. The df.compute() statement triggers the actual computation and returns a Pandas DataFrame.</p>
+<p>In this code, dd.read_csv(’dataset/*.csv’) reads all CSV files matching the wildcard pattern and returns a Dask DataFrame. This operation is lazy; it doesn’t trigger any actual computation but builds up a task graph. The df.compute() statement triggers the actual computation and returns a Pandas DataFrame.</p>
 <p>This Dask version will typically be faster than the Pandas version, particularly for large datasets because Dask works on smaller chunks of the data in parallel, which can also make it more memory-efficient.</p>
 <p>As with the Pandas version, make sure that the CSV files are in the same directory as your Python script or notebook, or provide the full path to the files.</p>
 <p>Remember that Dask might be a bit overkill for small data sets, as it has some overhead for dividing tasks into smaller chunks and distributing them. But for larger datasets, Dask can significantly outperform Pandas.</p>
