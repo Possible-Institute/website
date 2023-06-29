@@ -176,6 +176,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
+<p>A two-sample Z-test is a statistical procedure used to determine whether the mean of two populations is significantly different. This test is most appropriate when you have two independent samples and the population standard deviations are known, or the sample size is large enough to estimate the population standard deviations.</p>
+<p>Before applying the two-sample Z-test, you should ensure that your data meet the following assumptions:</p>
+<p>Independence: The two samples are randomly drawn and independent from each other. Normality: The populations from which the samples are drawn should be normally distributed or the sample sizes should be sufficiently large (usually n &gt; 30) according to the Central Limit Theorem. Standard Deviation: The population standard deviations are known or can be approximated from the sample.</p>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>two_samples_z_test.py</strong></pre>
@@ -195,8 +198,54 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(z, p)</span>
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a, b)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<section id="another-example" class="level3">
+<h3 class="anchored" data-anchor-id="another-example">Another Example</h3>
+<p>Sure, let’s consider an example where we have test scores from two different classes and we want to see if there is a significant difference between the means of the two classes’ test scores.</p>
+<p>Assume that we know the standard deviations of scores in the two classes from previous years or other data.</p>
+<p>Here is the Python code to perform a two-sample Z-test:</p>
+<div class="cell" data-execution_count="1">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> norm</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Sample data</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>class1_scores <span class="op">=</span> np.array([<span class="dv">87</span>, <span class="dv">89</span>, <span class="dv">91</span>, <span class="dv">93</span>, <span class="dv">95</span>])</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>class2_scores <span class="op">=</span> np.array([<span class="dv">81</span>, <span class="dv">83</span>, <span class="dv">85</span>, <span class="dv">87</span>, <span class="dv">89</span>])</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Known population standard deviations</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>std_dev_class1 <span class="op">=</span> <span class="fl">4.5</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>std_dev_class2 <span class="op">=</span> <span class="fl">3.9</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Sample means</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>mean_class1 <span class="op">=</span> np.mean(class1_scores)</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>mean_class2 <span class="op">=</span> np.mean(class2_scores)</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Sample sizes</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>n_class1 <span class="op">=</span> <span class="bu">len</span>(class1_scores)</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>n_class2 <span class="op">=</span> <span class="bu">len</span>(class2_scores)</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate the test statistic (Z-score)</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>z <span class="op">=</span> (mean_class1 <span class="op">-</span> mean_class2) <span class="op">/</span> np.sqrt((std_dev_class1<span class="op">**</span><span class="dv">2</span><span class="op">/</span>n_class1) <span class="op">+</span> (std_dev_class2<span class="op">**</span><span class="dv">2</span><span class="op">/</span>n_class2))</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate the two-tailed p-value</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>p <span class="op">=</span> (<span class="dv">1</span> <span class="op">-</span> norm.cdf(<span class="bu">abs</span>(z))) <span class="op">*</span> <span class="dv">2</span></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Z-score: '</span>, z)</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'p-value: '</span>, p)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>Z-score:  2.253029545296665
+p-value:  0.024257286140158207</code></pre>
+</div>
+</div>
+<p>Here, the Z-score is the test statistic and it follows a standard normal distribution. The p-value is the probability of observing a test statistic as extreme as the one calculated, given that the null hypothesis is true.</p>
+<p>If the p-value is less than your chosen significance level (often 0.05), you would reject the null hypothesis and conclude there is a significant difference between the means of the two classes’ test scores. If the p-value is greater than your significance level, you would not reject the null hypothesis and conclude there is not a significant difference between the means.</p>
+<p>Please note that the Python scipy library provides a function for the two-sample Z-test if the population standard deviations are not known but the sample size is large, the function is scipy.stats.ttest_ind. However, it assumes equal variance in both populations unless specified otherwise. It essentially performs a t-test, which becomes nearly identical to a Z-test with large sample sizes.</p>
+<p>Also, this is a simplified example. In a real-world scenario, the appropriate test to use would depend on the nature of your data and the specific circumstances of your analysis. It’s always a good idea to consult with a statistician or knowledgeable advisor when performing these types of analyses.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
