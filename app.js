@@ -51,7 +51,7 @@ class Progress {
       this.yRange         = param.yRange || this.height * 2;
       this.progress       = new Progress({
         duration : param.duration,
-        isLoop   : true
+        isLoop   : false
       });
       this.rotationRange  = typeof param.rotationRange === "number" ? param.rotationRange
                                                                      : 10;
