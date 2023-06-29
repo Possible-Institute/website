@@ -111,7 +111,19 @@ a {
   text-decoration: none;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 400px) {
+  /* CSS rules for screens smaller than 600px */
+  .hero-title {
+    font-size: 2em;
+    margin-left: -30px;
+  }
+  .hero-subtitle{
+    font-size: 0.7em;
+  }
+}
+
+
+@media (min-width: 401px) and (max-width: 600px) {
   /* CSS rules for screens smaller than 600px */
   .hero-title {
     font-size: 3.5em;
