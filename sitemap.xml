@@ -2,46 +2,50 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.possible.institute/blog.html</loc>
-    <lastmod>2023-07-04T10:56:59.738Z</lastmod>
+    <lastmod>2023-07-04T15:40:35.072Z</lastmod>
   </url>
   <url>
-    <loc>https://www.possible.institute/index.html</loc>
-    <lastmod>2023-07-04T10:56:58.427Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.possible.institute/posts/regression/multiple.html</loc>
-    <lastmod>2023-07-04T10:56:57.413Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.possible.institute/posts/about-euler/index.html</loc>
-    <lastmod>2023-07-04T10:56:56.253Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.possible.institute/posts/read-multiple-csv/index.html</loc>
-    <lastmod>2023-07-04T10:56:55.079Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.possible.institute/posts/data-science-project/index.html</loc>
-    <lastmod>2023-07-04T10:56:53.801Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.possible.institute/ml-systems.html</loc>
-    <lastmod>2023-07-04T10:56:53.145Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.possible.institute/posts/decision-making/index.html</loc>
-    <lastmod>2023-07-04T10:56:54.509Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.possible.institute/posts/two-sample-z-test/index.html</loc>
-    <lastmod>2023-07-04T10:56:55.717Z</lastmod>
+    <loc>https://www.possible.institute/substack.html</loc>
+    <lastmod>2023-07-04T15:40:34.157Z</lastmod>
   </url>
   <url>
     <loc>https://www.possible.institute/posts/regression/simple.html</loc>
-    <lastmod>2023-07-04T10:56:56.867Z</lastmod>
+    <lastmod>2023-07-04T15:40:32.851Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.possible.institute/posts/two-sample-z-test/index.html</loc>
+    <lastmod>2023-07-04T15:40:32.125Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.possible.institute/posts/decision-making/index.html</loc>
+    <lastmod>2023-07-04T15:40:31.234Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.possible.institute/ml-systems.html</loc>
+    <lastmod>2023-07-04T15:40:30.290Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.possible.institute/posts/data-science-project/index.html</loc>
+    <lastmod>2023-07-04T15:40:30.705Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.possible.institute/posts/read-multiple-csv/index.html</loc>
+    <lastmod>2023-07-04T15:40:31.663Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.possible.institute/posts/about-euler/index.html</loc>
+    <lastmod>2023-07-04T15:40:32.464Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.possible.institute/posts/regression/multiple.html</loc>
+    <lastmod>2023-07-04T15:40:33.191Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.possible.institute/index.html</loc>
+    <lastmod>2023-07-04T15:40:33.889Z</lastmod>
   </url>
   <url>
     <loc>https://www.possible.institute/start-here.html</loc>
-    <lastmod>2023-07-04T10:56:59.157Z</lastmod>
+    <lastmod>2023-07-04T15:40:34.680Z</lastmod>
   </url>
 </urlset>
