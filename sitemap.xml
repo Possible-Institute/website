@@ -2,42 +2,46 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.possible.institute/blog.html</loc>
-    <lastmod>2023-06-29T20:00:27.644Z</lastmod>
+    <lastmod>2023-07-04T10:56:59.738Z</lastmod>
   </url>
   <url>
     <loc>https://www.possible.institute/index.html</loc>
-    <lastmod>2023-06-29T20:00:26.823Z</lastmod>
+    <lastmod>2023-07-04T10:56:58.427Z</lastmod>
   </url>
   <url>
     <loc>https://www.possible.institute/posts/regression/multiple.html</loc>
-    <lastmod>2023-06-29T20:00:26.168Z</lastmod>
+    <lastmod>2023-07-04T10:56:57.413Z</lastmod>
   </url>
   <url>
     <loc>https://www.possible.institute/posts/about-euler/index.html</loc>
-    <lastmod>2023-06-29T20:00:25.436Z</lastmod>
+    <lastmod>2023-07-04T10:56:56.253Z</lastmod>
   </url>
   <url>
     <loc>https://www.possible.institute/posts/read-multiple-csv/index.html</loc>
-    <lastmod>2023-06-29T20:00:24.685Z</lastmod>
+    <lastmod>2023-07-04T10:56:55.079Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.possible.institute/posts/data-science-project/index.html</loc>
+    <lastmod>2023-07-04T10:56:53.801Z</lastmod>
   </url>
   <url>
     <loc>https://www.possible.institute/ml-systems.html</loc>
-    <lastmod>2023-06-29T20:00:23.859Z</lastmod>
+    <lastmod>2023-07-04T10:56:53.145Z</lastmod>
   </url>
   <url>
     <loc>https://www.possible.institute/posts/decision-making/index.html</loc>
-    <lastmod>2023-06-29T20:00:24.318Z</lastmod>
+    <lastmod>2023-07-04T10:56:54.509Z</lastmod>
   </url>
   <url>
     <loc>https://www.possible.institute/posts/two-sample-z-test/index.html</loc>
-    <lastmod>2023-06-29T20:00:25.085Z</lastmod>
+    <lastmod>2023-07-04T10:56:55.717Z</lastmod>
   </url>
   <url>
     <loc>https://www.possible.institute/posts/regression/simple.html</loc>
-    <lastmod>2023-06-29T20:00:25.815Z</lastmod>
+    <lastmod>2023-07-04T10:56:56.867Z</lastmod>
   </url>
   <url>
     <loc>https://www.possible.institute/start-here.html</loc>
-    <lastmod>2023-06-29T20:00:27.280Z</lastmod>
+    <lastmod>2023-07-04T10:56:59.157Z</lastmod>
   </url>
 </urlset>

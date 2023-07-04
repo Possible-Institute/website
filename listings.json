@@ -2,6 +2,7 @@
   {
     "listing": "/blog.html",
     "items": [
+      "/posts/data-science-project/index.html",
       "/posts/decision-making/index.html",
       "/posts/about-euler/index.html",
       "/posts/regression/simple.html",
